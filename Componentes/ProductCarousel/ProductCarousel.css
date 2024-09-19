@@ -1,0 +1,47 @@
+/* productcarousel.css */
+
+.product-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-left: 1rem; /* Ajuste aqui para aumentar ou diminuir o espaço */
+}
+
+.main-image-container {
+  margin-bottom: 1rem;
+}
+
+.main-image {
+  max-height: 500px;
+  width: auto;
+  object-fit: contain; /* Ajusta a imagem para caber dentro do container sem distorcer */
+}
+
+/* Contêiner das miniaturas */
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as miniaturas quebrem a linha */
+  gap: 0.5rem; /* Espaço entre as miniaturas */
+  padding: 10px 0;
+  justify-content: flex-start; /* Alinha as miniaturas à esquerda */
+}
+
+/* Estilo das miniaturas */
+.thumbnail {
+  height: 6.25rem; /* Define a altura das miniaturas */
+  width: auto; /* Mantém a proporção da imagem */
+  cursor: pointer;
+  object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorcer */
+  transition: transform 0.2s ease;
+  /* Ajusta a largura máxima das miniaturas */
+  max-width: calc(20% - 0.5rem); /* Ajusta o número de miniaturas por linha, com base no tamanho do container e do gap */
+  flex: 1 1 auto; /* Permite que as miniaturas se ajustem dinamicamente */
+}
+
+/* Efeito de hover das miniaturas */
+.thumbnail:hover {
+  transform: scale(1.1); /* Aumenta a miniatura ao passar o mouse */
+}
+

@@ -1,0 +1,13 @@
+.outros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0; /* 40px de espaçamento acima e abaixo */
+}
+
+.outros img {
+  width: 600px; /* Largura de 600px */
+  height: 600px; /* Altura de 600px */
+  display: block; /* Remove o espaço embaixo da imagem */
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "nome": "detetive labrador",
+    "imagem": "  https://i.ibb.co/k0QYfWX/cachorro.jpg",
+    "imagem2": "  https://i.ibb.co/ZTfs4Fq/cachorro-2.jpg",
+    "imagem3": "  https://i.ibb.co/1QZn5T8/cachorro-3.jpg",
+    "imagem4": "  https://i.ibb.co/tPKxFJX/cachorro-4.jpg",
+    "imagem5": "  https://i.ibb.co/hY2X8kY/cachorro-5.jpg",
+    "imagem6": "  https://i.ibb.co/tPKxFJX/cachorro-4.jpg",
+    "imagem7": "  https://i.ibb.co/hY2X8kY/cachorro-5.jpg",
+    "descricao": "Descrição: Essa caixinha pode ser feita no tema que você desejar e no tamanho que quiserDescrição: Essa caixinha pode ser feita no tema que você desejar e no tamanho que quiserDescrição: Essa caixinha pode ser feita no tema que você desejar e no tamanho que quiser",
+    "preco": "2,00 (unidade)"
+  },
+
+  {
+    "nome": "selva",
+    "imagem": "https://i.ibb.co/5vfz7fY/selva.jpg",
+    "imagem2": "https://i.ibb.co/gdj4JGw/selva-2.jpg",
+    "imagem3": "https://i.ibb.co/p0rZ1yt/selva-3.jpg",
+    "imagem4": "https://i.ibb.co/gD1BtjB/selva-4.jpg",
+    "imagem5": "https://i.ibb.co/5vfz7fY/selva.jpg",
+    "descricao": "Caixinha tema: selva",
+    "preco": "15,00"
+  },
+  {
+    "nome": "Topo do batman",
+    "imagem": "https://i.ibb.co/BLTs2rX/batman-3.webp",
+    "imagem2": "https://i.ibb.co/Fgc61q0/batman-2.webp",
+    "imagem3": "https://i.ibb.co/4K5Ygjt/batman-4.webp",
+    "imagem4": "https://i.ibb.co/Jc9G153/batman.jpg",
+    "imagem5": "https://i.ibb.co/xDc8WBH/batman-7.webp",
+    "imagem6": "https://i.ibb.co/FHxZxsP/batman-6.webp",
+     "imagem7": "https://i.ibb.co/FHxZxsP/batman-6.webp",
+    "descricao":"teste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batmanteste batman, teste batman teste batman",
+    "preco": "2,00"
+  }
+]
+
+
+

@@ -1,0 +1,115 @@
+/* produto.css */
+
+/* Contêiner principal para centralizar o conteúdo */
+.product-details-container {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 1rem; /* Adiciona algum espaçamento interno */
+}
+
+/* Contêiner para o carrossel e informações do produto */
+.product-carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Ajusta a distância entre o carrossel e o texto */
+  flex: 1; /* Faz com que o carrossel ocupe o espaço disponível */
+  margin-top: 1rem;
+}
+
+/* Estilo para o carrossel */
+.product-carousel {
+  max-height: 550px; /* Ajusta a altura máxima da imagem do carrossel */
+}
+
+/* Estilo para as informações do produto */
+.product-info {
+  flex: 1; /* Faz com que as informações ocupem o espaço restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha o conteúdo ao início do contêiner */
+  max-width: 50%; /* Limita a largura das informações */
+  margin-top: 20px; /* Ajusta o espaçamento do topo para ficar 20px abaixo do Menu */
+}
+
+/* Estilo para o título do produto */
+.product-info h1 {
+  font-size: 5rem; /* Ajuste o tamanho da fonte conforme necessário */
+  margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+  color: black; /* Cor do texto */
+  font-family: cursive;
+}
+
+/* Estilo para o preço e descrição do produto */
+.product-info p {
+  font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
+  margin: 1rem; /* Espaçamento entre os parágrafos */
+  color: black; /* Cor do texto */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+/* Estilo para a descrição do produto */
+.product-description {
+  max-width: 80%; /* Limita a largura da descrição */
+  padding-top: 7rem;
+  font-size: 1.5rem;
+}
+
+/* Estilo para o texto "Descrição" */
+.des {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: blue;
+  margin-bottom: 8rem;
+}
+
+/* Estilo para o campo de entrada de quantidade */
+.quantity-container {
+  margin-bottom: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.quantity-input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px;
+  }
+
+/* Estilo para os botões */
+.button-container {
+  display: flex;
+  gap: 5rem; /* Espaçamento de 5rem entre os botões */
+  margin-top: 2rem; /* Espaçamento entre o preço e os botões */
+}
+
+.btn-add-to-cart {
+  background-color: #f8b3d0; /* Rosa claro */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.btn-buy-now {
+  background-color: #e91e63; /* Rosa escuro */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.btn-add-to-cart:hover, .btn-buy-now:hover {
+  opacity: 0.8; /* Efeito de hover para ambos os botões */
+}

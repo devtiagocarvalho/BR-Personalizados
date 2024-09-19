@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+.carousel-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  }
+
+  .carousel-wrapper > h1{
+    font-family: "Sofia", cursive;
+    color: black;
+    font-size: 60px;
+  }
+.carousel-container {
+  position: relative;
+  width: calc(100% - 40px); /* Ajusta o tamanho do carrossel para deixar espaço nas laterais */
+  margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 33.33%; /* Mostra 3 itens por vez */
+  margin: 0 10px; /* Margem de 10px em ambas as laterais */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 350px; /* Ajustado para manter a altura máxima */
+}
+
+button.prev, button.next {
+  background-color: pink;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+button.prev {
+  left: 20px;
+}
+
+button.next {
+  right: 20px;
+  
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgb(210, 143, 154);
+}
+
+.material-symbols-outlined {
+  font-size: 48px;
+  color: white;
+}

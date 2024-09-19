@@ -1,0 +1,40 @@
+footer {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    border: 2px solid black; /* Define a borda do footer */
+    overflow: hidden; /* Esconde qualquer conteúdo que exceda o tamanho do footer */
+    padding: 2px; /* Adiciona um espaçamento interno para evitar que o conteúdo toque a borda */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho do elemento */
+  }
+  
+  .voltar {
+    cursor: pointer; /* Adiciona um cursor de ponteiro ao passar o mouse sobre o texto */
+  }
+  
+  .voltar h4 {
+    font-size: 25px; /* Define o tamanho da fonte */
+    color: black; /* Define a cor do texto como preta */
+    margin: 0; /* Remove a margem padrão */
+  }
+  
+  .footer-info {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: pink;
+  }
+  
+  section {
+    margin-left: 0; /* Remove a margem esquerda se não for necessária */
+  }
+  
+  .cnpj {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  

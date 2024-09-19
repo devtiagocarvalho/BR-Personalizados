@@ -1,0 +1,20 @@
+.outros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0; /* 40px de espaçamento acima e abaixo */
+}
+
+.outros img {
+  width: 600px; /* Largura de 600px */
+  height: 600px; /* Altura de 600px */
+  display: block; /* Remove o espaço embaixo da imagem */
+}
+
+.imgfinal {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  height: calc(100vh - 40px); /* Ajuste a altura para preencher a tela menos o espaço */
+  }
