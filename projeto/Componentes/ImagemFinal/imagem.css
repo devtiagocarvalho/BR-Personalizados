@@ -1,0 +1,24 @@
+.imgfinal {
+  display: flex;
+  justify-content: space-evenly; /* Distribui as imagens com espaçamento igual nas laterais */
+  align-items: center;
+  height: calc(100vh - 40px);
+  width: 100%; /* Garante que ocupe toda a largura da tela */
+  margin: 0 auto; /* Remove a margem lateral que pode estar desalinhando */
+}
+
+
+.outros {
+  max-width: 80%; /* Define um limite de largura para o contêiner */
+  margin: 0 auto; /* Centraliza o contêiner na tela */
+  display: flex;
+  justify-content: center; /* Garante espaçamento igual nas laterais */
+  gap: 90px; /* Espaçamento entre as imagens */
+}
+
+
+.outros img {
+  width: 400px; /* Largura de 400px */
+  height: 100%; /* Altura de 400px */
+  display: block; /* Remove o espaço embaixo da imagem */
+}

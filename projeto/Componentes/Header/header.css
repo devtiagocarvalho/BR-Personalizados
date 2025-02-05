@@ -1,0 +1,145 @@
+/* Estilos para o cabeçalho e seus elementos de navegação */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos do cabeçalho com layout responsivo e efeitos interativos */
+header {
+    position: fixed;  
+    top: 0; 
+    left: 0;  
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+    border-bottom: 1px solid black;
+    background-color: white;  
+    z-index: 1000;  
+}
+
+body {
+    background-color: rgba(239, 224, 224, 0.392); /*rgba(255, 20, 145, 0.614)*/
+    margin: 0;
+    padding: 0;
+    padding-top: 150px; /* Adiciona um padding-top para que o conteúdo não fique atrás do header fixo */
+}
+
+nav > ul {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    list-style: none;  
+    display: flex;     
+    margin: 0;        
+    padding: 0;        
+    margin-right: 30px;
+    gap: 20px;
+}
+
+nav > ul > li {
+    margin-left: 20px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    margin-left: 25px;
+}
+
+.logo-image{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    
+}
+
+span {
+    font-family: 'Playpen Sans', sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+    color: black;
+}
+
+.icon-link {
+    display: inline-flex; 
+    text-decoration: none; 
+}
+
+.icon-link:hover {
+    cursor: pointer; 
+    transform: translateY(-5px); 
+    transition: transform 0.1s ease;
+    box-shadow: 5px 5px rgb(231, 127, 144);
+    border: none;
+}
+
+.sobre:hover{
+    cursor: pointer; 
+    transform: translateY(-5px); 
+    transition: transform 0.1s ease;
+   
+}
+
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-icon-container a {
+    text-decoration: none;
+    color: black; /* Cor fixa para o ícone */
+    display: inline-flex;
+    transition: transform 0.1s ease;
+}
+
+.cart-icon-container a:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: none; /* Remove qualquer sombra */
+    background: none; /* Remove qualquer background */
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #E1306C;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* MOBILE CONFIGURAÇÕES*/
+@media (max-width: 768px) {
+    header {
+        height: 5rem; /* Padronizado para rem */
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        margin-left: 1rem;
+        justify-content: center;
+    }
+    
+    .logo-image {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    span {
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .cart-icon-container {
+        position: absolute;
+        right: 1rem;
+    }
+}
+  
