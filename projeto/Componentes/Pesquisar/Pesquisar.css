@@ -1,0 +1,36 @@
+.search-container {
+    width: 90%;
+    margin: 1rem auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    padding-right: 3rem; /* Espaço para o botão */
+    border: 1px solid #E1306C;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    color: #E1306C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    color: #ff4081;
+}
+
+/* Removido o .search-results e .search-result-item pois não serão mais necessários */ 

@@ -3,34 +3,34 @@ import "./convites.css"
 import Header from "../../Componentes/Header/header";
 import Menu from "../../Componentes/Menu/menu";
 import Footer from "../../Componentes/Footer/footer";
+import imageConfig from '../../config/images'; // Importando a configuração de imagens
 
 function Convites() {
+  const { tipos } = imageConfig.paginas.convites; // Acessando os tipos de convites
+
   return (
     <div>
       <Header />
       <Menu />
       <h1 className="titulo">Convites Personalizados</h1>
 
-      <h2 className="subtitulo">Convites para Festas:</h2>
-      <div className="imagem-container">
-        <div className="card">
-          <Link to={`/product/Convite Festa Infantil`} className="product-link">
-            <img src="https://i.ibb.co/prcgcGz/agenda-1.jpg" alt="Convite Festa Infantil" />
-            <p className="nome">Convite Festa Infantil</p>
-            <p className="tamanho">15cm x 10cm</p>
-            <p className="preco">R$ 35,00</p>
-          </Link>
+      {Object.entries(tipos).map(([tipoKey, tipo]) => ( // Mapeando os tipos de convites
+        <div key={tipoKey}>
+          <h2 className="subtitulo">{tipo.titulo}</h2>
+          <div className="imagem-container">
+            {tipo.produtos.map((produto) => ( // Mapeando os produtos de cada tipo
+              <div className="card" key={produto.id}>
+                <Link to={`/product/${encodeURIComponent(produto.nome)}`} className="product-link">
+                  <img src={produto.imagem} alt={produto.nome} />
+                  <p className="nome">{produto.nome}</p>
+                  <p className="tamanho">{produto.tamanho}</p>
+                  <p className="preco">R$ {produto.preco}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="card">
-          <Link to={`/product/Convite Casamento`} className="product-link">
-            <img src="https://i.ibb.co/6tX6hqW/material.webp" alt="Convite Casamento" />
-            <p className="nome">Convite Casamento</p>
-            <p className="tamanho">18cm x 12cm</p>
-            <p className="preco">R$ 40,00</p>
-          </Link>
-        </div>
-        {/* Você pode adicionar mais cards de convites aqui */}
-      </div>
+      ))}
 
       <Footer />
     </div>

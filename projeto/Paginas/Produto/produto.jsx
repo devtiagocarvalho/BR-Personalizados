@@ -1,10 +1,13 @@
+// PÁGINA DOS PRODUTOS QUANDO CLICADOS. 
+// PÁGINAS DOS PRODUTOS COM MINIATURAS
+
 import { useEffect, useState } from 'react'; // Importa os hooks useEffect e useState do React
 import { useParams } from 'react-router-dom'; // Importa o hook useParams para obter parâmetros da URL
 import "./produto.css"; // Importa o arquivo CSS específico do componente
 import Header from '../../Componentes/Header/header'; // Importa o componente Header
 import ProductCarousel from '../../Componentes/ProductCarousel/ProductCarousel'; // Importa o carrossel de imagens do produto
 import Menu from "../../Componentes/Menu/menu"; // Importa o componente Menu
-import { useCart } from '../../Componentes/Cart/CartContext'; // Importa o contexto do carrinho de compras
+import { useCart } from '../../Componentes/Carrinho/CarrinhoContext'; // Importa o contexto do carrinho de compras
 import Notification from '../../Componentes/Notification/Notification'; // Importa o componente de notificações
 import imageConfig from '../../config/images'; // Importa o objeto de configuração de imagens
 
@@ -25,7 +28,7 @@ const ProductDetails = () => {
         
         // Percorre todas as categorias e tipos de produtos para encontrar o produto correspondente
         Object.values(imageConfig.paginas).forEach(categoria => {
-          Object.values(categoria.tipos).forEach(tipo => {
+        Object.values(categoria.tipos).forEach(tipo => {
             const found = tipo.produtos.find(p => p.nome === decodedNome);
             if (found) foundProduct = found; // Se encontrar o produto, armazena na variável
           });
@@ -115,4 +118,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails; // Exporta o componente para ser usado em outras partes do projeto
+export default ProductDetails;

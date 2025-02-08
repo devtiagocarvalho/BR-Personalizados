@@ -1,13 +1,11 @@
-import { CartProvider } from "../Componentes/Cart/CartContext"
+import { CarrinhoProvider } from "../Componentes/Carrinho/CarrinhoContext"
 import AppRoutes from "../Rotas/routes"
+
 function App() {
   return (
-    <>
-    <CartProvider>
-    <AppRoutes/>
-    </CartProvider>
- 
-    </>
+    <CarrinhoProvider>
+      <AppRoutes />
+    </CarrinhoProvider>
   )
 }
 

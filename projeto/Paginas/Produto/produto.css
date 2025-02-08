@@ -1,59 +1,79 @@
 /* produto.css */
 
-/* Contêiner principal para centralizar o conteúdo */
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+
+/* Contêiner principal */
 .product-details-container {
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  padding: 1rem; /* Adiciona algum espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 4rem;
 }
 
-/* Contêiner para o carrossel e informações do produto */
+/* Contêiner do carrossel */
 .product-carousel-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem; /* Ajusta a distância entre o carrossel e o texto */
-  flex: 1; /* Faz com que o carrossel ocupe o espaço disponível */
-  margin-top: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Estilo para o carrossel */
+/* Carrossel principal */
 .product-carousel {
-  max-height: 550px; /* Ajusta a altura máxima da imagem do carrossel */
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
-/* Estilo para as informações do produto */
-.product-info {
-  flex: 1; /* Faz com que as informações ocupem o espaço restante */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Alinha o conteúdo ao início do contêiner */
-  max-width: 50%; /* Limita a largura das informações */
-  margin-top: 20px; /* Ajusta o espaçamento do topo para ficar 20px abaixo do Menu */
+/* Container das miniaturas */
+.thumbnail-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-/* Estilo para o título do produto */
-.product-info h1 {
-  font-size: 5rem; /* Ajuste o tamanho da fonte conforme necessário */
-  margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
-  color: black; /* Cor do texto */
-  font-family: cursive;
+/* Miniaturas */
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
 }
 
-/* Estilo para o preço e descrição do produto */
-.product-info p {
-  font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
-  margin: 1rem; /* Espaçamento entre os parágrafos */
-  color: black; /* Cor do texto */
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
+.thumbnail:hover {
+    border-color: #E91E63;
 }
 
-/* Estilo para a descrição do produto */
+/* Descrição do produto */
 .product-description {
-  max-width: 80%;
-  padding-top: 2rem;
-  font-size: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+/* Informações do produto */
+.product-info {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Título do produto */
+.product-info h1 {
+    font-family: 'Baskervville', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+/* Preço */
+.product-info p {
+    font-size: 3rem;
+    margin: 1rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 /* Estilo para o texto "Descrição" */
@@ -124,4 +144,72 @@
 
 .btn-buy-now:hover {
   opacity: 0.9;
+}
+
+.resumo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.resumo-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resumo-content {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.parcelamento-info {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.action-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.finalizar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #E1306C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.continuar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
 }

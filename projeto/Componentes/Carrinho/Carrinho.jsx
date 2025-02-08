@@ -1,11 +1,12 @@
 // Interface do carrinho de compras com lista de produtos e resumo do pedido
 import { useEffect, useState } from 'react';
-import { useCart } from '../Cart/CartContext';
+import { useCart } from './CarrinhoContext';
 import { Link } from 'react-router-dom';
 import Header from '../Header/header';
 import Menu from '../Menu/menu';
 import './Carrinho.css';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 // Componente principal do carrinho de compras
 function Carrinho() {
@@ -55,6 +56,24 @@ function Carrinho() {
         */
     };
 
+    const getTotalItems = () => {
+        return cartItems.reduce((total, item) => total + item.quantity, 0);
+    };
+
+    // Renderiza mensagem de carrinho vazio
+    const renderEmptyCart = () => {
+        return (
+            <div className="carrinho-vazio">
+                <ShoppingCartIcon className="carrinho-vazio-icon" />
+                <h2>Seu carrinho está vazio!</h2>
+                <p>Você ainda não possui itens no seu carrinho.</p>
+                <Link to="/" className="continuar-btn">
+                    CONTINUAR COMPRANDO
+                </Link>
+            </div>
+        );
+    };
+
     // Mostra loading enquanto carrega
     if (isLoading) {
         return <div>Carregando...</div>;
@@ -66,60 +85,79 @@ function Carrinho() {
             <Header />
             <Menu />
             <div className="carrinho-container">
-                {/* Cabeçalho do carrinho com título e contador de itens */}
-                <div className="carrinho-header">
-                    <h2>SACOLA DE COMPRAS - BR PERSONALIZADOS</h2>
-                    <span className="item-count">{cartItems.length} {cartItems.length === 1 ? 'ITEM' : 'ITENS'}</span>
-                </div>
-
-                <div className="carrinho-content">
-                    {/* Lista de itens no carrinho */}
-                    <div className="carrinho-items">
-                        {cartItems.map((item) => (
-                            <div key={item.nome} className="carrinho-item">
-                                <img src={item.imagem} alt={item.nome} className="item-image" />
-                                <div className="item-info">
-                                    <h3>{item.nome}</h3>
-                                    <p>Quantidade: {item.quantity}</p>
-                                    <p>Preço: R$ {item.preco}</p>
-                                </div>
-                                <button 
-                                    className="remove-button"
-                                    onClick={() => handleRemoveItem(item.nome)}
-                                    title="Remover item"
-                                >
-                                    <DeleteOutlineIcon />
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Resumo do pedido com valores e botões de ação */}
-                    <div className="carrinho-resumo">
-                        <h3>RESUMO</h3>
-                        <div className="resumo-item">
-                            <span>Subtotal ({cartItems.length} {cartItems.length === 1 ? 'item' : 'itens'})</span>
-                            <span>R$ {calcularSubtotal().toFixed(2)}</span>
-                        </div>
-                        <div className="resumo-total">
-                            <span>Total</span>
-                            <span>R$ {calcularSubtotal().toFixed(2)}</span>
-                        </div>
-                        <div className="parcelamento">
-                            em até 3x de R$ {(calcularSubtotal() / 3).toFixed(2)}
-                        </div>
-
-                        <button 
-                            className="finalizar-compra"
-                            onClick={handleFinalizarCompra}
-                        >
-                            FINALIZAR COMPRA
-                        </button>
-                        <Link to="/" className="continuar-comprando">
+                {cartItems.length === 0 ? (
+                    <div className="carrinho-vazio">
+                        <ShoppingCartIcon className="carrinho-vazio-icon" />
+                        <h2>Seu carrinho está vazio!</h2>
+                        <p>Você ainda não possui itens no seu carrinho.</p>
+                        <Link to="/" className="continuar-btn">
                             CONTINUAR COMPRANDO
                         </Link>
                     </div>
-                </div>
+                ) : (
+                    <>
+                        <div className="carrinho-header">
+                            <h2>SACOLA DE COMPRAS - BR PERSONALIZADOS</h2>
+                            <span className="item-count">
+                                {getTotalItems()} {getTotalItems() === 1 ? 'PRODUTO' : 'PRODUTOS'}
+                            </span>
+                        </div>
+
+                        <div className="carrinho-content">
+                            <div className="carrinho-items">
+                                {cartItems.map((item) => (
+                                    <div key={item.nome} className="carrinho-item">
+                                        <img src={item.imagem} alt={item.nome} className="item-image" />
+                                        <div className="item-info">
+                                            <h3>{item.nome}</h3>
+                                            <p>Quantidade: {item.quantity}</p>
+                                            <p>Preço: R$ {item.preco}</p>
+                                        </div>
+                                        <button 
+                                            className="remove-button"
+                                            onClick={() => handleRemoveItem(item.nome)}
+                                            title="Remover item"
+                                        >
+                                            <DeleteOutlineIcon />
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Resumo do pedido com valores e botões de ação */}
+                            <div className="carrinho-resumo">
+                                <h3 className="resumo-header">Resumo do pedido</h3>
+                                <div className="resumo-divider"></div>
+                                <div className="item-count-resumo">
+                                    <span>
+                                        <span>{getTotalItems()}</span>
+                                        <span>{getTotalItems() === 1 ? 'Produto' : 'Produtos'}</span>
+                                    </span>
+                                    <span>R$ {calcularSubtotal().toFixed(2)}</span>
+                                </div>
+                                <div className="resumo-divider"></div>
+                                <div className="resumo-total">
+                                    <span>Total</span>
+                                    <span>R$ {calcularSubtotal().toFixed(2)}</span>
+                                </div>
+                                <div className="parcelamento-info">
+                                    em até 3x de R$ {(calcularSubtotal() / 3).toFixed(2)}
+                                </div>
+                                <div className="action-buttons">
+                                    <button 
+                                        className="finalizar-btn"
+                                        onClick={handleFinalizarCompra}
+                                    >
+                                        FINALIZAR COMPRA
+                                    </button>
+                                    <Link to="/" className="continuar-btn">
+                                        CONTINUAR COMPRANDO
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
         </>
     );

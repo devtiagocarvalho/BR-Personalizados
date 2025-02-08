@@ -1,0 +1,103 @@
+/* CSS base para todas as páginas de produtos */
+.titulo {
+    font-family: "Quattrocento", serif;
+    font-weight: 900;
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.subtitulo {
+    font-family: "Quattrocento", serif;
+    font-weight: 900;
+    color: black;
+    font-size: 2.0rem;
+    margin-left: 4rem;
+    margin-top: 30px;
+    margin-bottom: 3rem;
+}
+
+.imagem-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.card {
+    width: calc(33.333% - 20px);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.nome {
+    font-size: 0.9rem;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.preco {
+    font-size: 1rem;
+    color: #E91E63;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tamanho {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-style: italic;
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+    
+    .subtitulo {
+        margin-left: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+    
+    .titulo {
+        font-size: 2rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+} 

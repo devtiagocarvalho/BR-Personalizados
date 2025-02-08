@@ -6,8 +6,9 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { FiShoppingCart } from "react-icons/fi";
-import { useCart } from '../Cart/CartContext';
+import { useCart } from '../Carrinho/CarrinhoContext';
 import imageConfig from '../../config/images';
+import Pesquisar from '../Pesquisar/Pesquisar';
 
 function Header() {
     const { cartItemCount } = useCart();
@@ -24,6 +25,12 @@ function Header() {
                     <span>BR Personalizados</span>
                 </Link>
             </div>
+
+            {/* Barra de pesquisa - visível apenas no mobile */}
+            <div className="mobile-search">
+                <Pesquisar />
+            </div>
+
             <nav>
                 <ul>
                     <li><a href="https://www.instagram.com/brpersonalizadoss_/" target="_blank" rel="noopener noreferrer" className="icon-link"> <InstagramIcon style={{ color: '#E1306C', fontSize: '40px' }} /></a></li>
