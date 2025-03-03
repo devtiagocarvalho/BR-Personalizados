@@ -1,0 +1,215 @@
+/* produto.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+
+/* Contêiner principal */
+.product-details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 4rem;
+}
+
+/* Contêiner do carrossel */
+.product-carousel-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Carrossel principal */
+.product-carousel {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Container das miniaturas */
+.thumbnail-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Miniaturas */
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #E91E63;
+}
+
+/* Descrição do produto */
+.product-description {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+/* Informações do produto */
+.product-info {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Título do produto */
+.product-info h1 {
+    font-family: 'Baskervville', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+/* Preço */
+.product-info p {
+    font-size: 3rem;
+    margin: 1rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+/* Estilo para o texto "Descrição" */
+.desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.2rem; /* Reduzido de 0.5rem para 0.2rem para unir mais */
+  display: block;
+}
+
+/* Ajuste para o <br> */
+.product-description br {
+  display: none; /* Remove o espaço extra do <br> */
+}
+
+/* Estilo para o campo de entrada de quantidade */
+.quantity-container {
+  margin-bottom: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.quantity-input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px;
+  }
+
+/* Estilo para os botões */
+.button-container {
+  display: flex;
+  gap: 5rem; /* Espaçamento de 5rem entre os botões */
+  margin-top: 2rem; /* Espaçamento entre o preço e os botões */
+}
+
+.btn-add-to-cart {
+  background-color: #FF69B4; /* Hot Pink - igual à notificação */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-buy-now {
+  background-color: #E91E63; /* Rosa mais escuro/pink para "Comprar" */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #FF5CAA; /* Um tom levemente mais escuro para o hover */
+}
+
+.btn-buy-now:hover {
+  opacity: 0.9;
+}
+
+.resumo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.resumo-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resumo-content {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.parcelamento-info {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.action-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.finalizar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #E1306C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.continuar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
