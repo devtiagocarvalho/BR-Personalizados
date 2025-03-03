@@ -1,0 +1,128 @@
+
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.heart-icon {
+  /* Você pode ajustar o tamanho conforme necessário */
+  font-size: 64px;
+  color: #ff69b4;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Use um caminho válido para sua imagem */
+    background-image: url('C:\Users\tiago\Desktop\mobile\projeto\imagens\logo novo.webp'); /* Ajuste para o caminho correto */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 340px;
+    max-width: 90%;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+    
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff69b4; /* Rosa similar ao logo */
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+}
+
+button {
+    background-color: #ff69b4; /* Rosa similar ao logo */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff5ba7;
+}
+
+.links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.links a {
+    color: #ff69b4;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+.login{
+    padding: 5px;
+    color: rgb(139, 0, 139);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart-icon {
+  font-size: 64px;
+  color: #ff69b4;
+  animation: pulse 0.3s infinite ease-in-out;
+}

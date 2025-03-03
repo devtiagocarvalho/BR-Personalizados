@@ -1,0 +1,59 @@
+body.sobre-nos {
+    background-color: rgb(255, 20, 147); /* Apenas para esta página */
+    margin: 0; /* Remover margens padrão do body */
+}
+
+.figura {
+    display: flex; /* Usar flexbox */
+    align-items: flex-start; /* Alinhar os itens no topo */
+    justify-content: flex-start; /* Alinhar à esquerda */
+    margin-left: 2rem; /* Reduzir a margem esquerda para mover tudo mais para a esquerda */
+    position: relative; /* Permite o posicionamento absoluto de filhos */
+}
+
+.figura img {
+    border-radius: 100%; /* Borda arredondada */
+    border: 5px solid black; /* Borda preta */
+    margin-right: 1rem; /* Espaçamento entre a imagem e o texto */
+}
+
+body {
+    background-color: rgb(255, 0, 43); /* Fundo rosa padrão (pode ser removido se não for necessário) */
+}
+
+.voltarsobre {
+    position: absolute;
+    top: 5%; /* Ajustar conforme necessário */
+    left: 50%;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1;
+    color: white;
+    width: 9rem;
+    text-align: center;
+}
+
+.text {
+    align-self: flex-start; /* Alinha o texto ao topo da imagem */
+    margin-top: -10px; /* Ajusta a posição do texto para cima se necessário */
+    font-size: 30px; /* Ajuste o tamanho da fonte conforme desejado */
+    text-align: justify;
+    margin-right: 7rem;
+    text-indent: 5%;
+    color: white;
+    }
+
+    h6 {
+        text-indent: 0; /* Remover indentação se necessário */
+    }
+    
+    h6::first-letter {
+        font-size: 3em; /* Aumenta o tamanho da letra */
+        font-weight: bold; /* Deixa a letra em negrito */
+        display: inline; /* Mantém a letra na mesma linha */
+        vertical-align: baseline; /* Alinha a letra à linha de base do texto */
+        margin-right: 5px; /* Espaçamento entre a letra e o restante do texto */
+        margin-top: -5px; /* Ajusta a posição vertical se necessário */
+    }

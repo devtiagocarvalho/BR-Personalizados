@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+.barra {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    min-height: 21rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.mensagem {
+    margin-top: 5px;
+    font-size: 28px;
+    text-align: center;
+    color: black;
+    font-family: "Mulish", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media (max-width: 768px) {
+    .barra {
+        min-height: auto;
+        padding: 10px 0;
+    }
+
+    .barra-mobile-carousel {
+        width: 100%;
+        padding: 0 20px;
+        background-color: white;
+    }
+
+    .item-mobile {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .item-mobile img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    .item-mobile .mensagem {
+        font-family: "Mulish", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .slick-dots {
+        bottom: -5px;
+    }
+
+    .slick-dots li button:before {
+        color: black;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: black;
+    }
+}

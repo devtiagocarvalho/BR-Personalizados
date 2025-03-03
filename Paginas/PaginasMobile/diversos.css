@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.titulo-mobile {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgb(11, 9, 9);
+    padding: 20px;
+    display: none;
+}
+
+.subtitulo-mobile {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+    padding: 0 20px;
+    display: none;
+}
+.imagens-diversos {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .titulo-mobile {
+        display: block;
+        text-align: left;
+        padding-left: 20px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        font-family: 'Jost', sans-serif!important;
+       }
+
+    .imagens-diversos {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .imagens-diversos .imagem-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .imagens-diversos .card {
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .imagens-diversos .product-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagens-diversos .product-link img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .imagens-diversos .subtitulo {
+        font-size: 1.2rem!important;
+        color: #3f3535!important;
+        margin: 15px 0 10px 10px!important;
+        padding-left: 5px;
+        text-align: left;
+    }
+        /* nomde dentro do card */
+    .imagens-diversos .nome {
+        font-size: 1.2rem !important;
+        margin: 5px 0;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        font-weight: 600!important;
+        padding: 0 5px;
+    }
+
+    .imagens-diversos .preco {
+        font-size: 1rem!important;
+        font-weight: 700!important;
+        color: #333;
+        margin: 5px 0;
+        text-align: center;
+    }
+}

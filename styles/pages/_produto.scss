@@ -1,0 +1,13 @@
+// Estilos base
+.product-details-container {
+  // ... estilos mobile
+}
+
+// Imports de breakpoints
+@import '../base/breakpoints';
+
+// Media queries em arquivos separados
+@import './produto/tablet';
+@import './produto/desktop'; 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";

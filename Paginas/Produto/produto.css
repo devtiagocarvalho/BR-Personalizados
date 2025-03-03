@@ -1,0 +1,521 @@
+/* produto.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
+
+/* Contêiner principal para centralizar o conteúdo */
+.product-details-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Contêiner para o carrossel e informações do produto */
+.product-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    margin-top: 1rem;
+}
+
+/* Estilo para o carrossel */
+.product-carousel {
+    max-height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajuste para a imagem principal */
+.main-image-container {
+    width: 100%;
+    height: 400px; /* Altura fixa para todas as imagens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Mantém a proporção sem distorcer */
+}
+
+/* Estilo para as informações do produto */
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 50%;
+    margin-top: 20px;
+}
+
+/* Estilo para o título do produto */
+.product-info h1 {
+    font-family: 'Baskervville', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+/* Estilo para o preço e descrição do produto */
+.product-info p {
+    font-size: 3rem;
+    margin: 1rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+/* Estilo para a descrição do produto */
+.product-description {
+    max-width: 80%;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+/* Container das miniaturas */
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Miniaturas */
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.thumbnail:hover {
+    border-color: #E91E63;
+}
+
+/* Estilo para o texto "Descrição" */
+.desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.2rem; /* Reduzido de 0.5rem para 0.2rem para unir mais */
+  display: block;
+}
+
+/* Ajuste para o <br> */
+.product-description br {
+  display: none; /* Remove o espaço extra do <br> */
+}
+
+/* Estilo para o campo de entrada de quantidade */
+.quantity-container {
+  margin-bottom: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.quantity-input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100px;
+  }
+
+/* Estilo para os botões */
+/* Estilos para versão web */
+.button-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.btn-add-to-cart {
+    background-color: #FF69B4;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-buy-now {
+    background-color: #E91E63;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #FF5CAA;
+}
+
+.btn-buy-now:hover {
+    opacity: 0.9;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .button-container {
+        display: none; /* Oculta os botões originais no mobile */
+    }
+
+    .quantity-container {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .btn-buy-now {
+        flex: 1;
+        background-color: #26A69A;
+        padding: 0.8rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 4px;
+    }
+}
+.btn-add-to-cart:hover {
+  background-color: #FF5CAA; 
+}
+
+.btn-buy-now:hover {
+  opacity: 0.9;
+}
+
+.resumo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.resumo-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resumo-content {
+    width: 100%;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.parcelamento-info {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.action-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.finalizar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #E1306C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.continuar-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-details-container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 12rem;
+        padding: 0;
+        align-items: center;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .product-carousel-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .product-carousel {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        overflow: hidden;
+    }
+
+    .main-image-container {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 100%;
+        overflow: hidden;
+    }
+
+    .main-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        margin: auto;
+    }
+
+    .product-info {
+        width: 90%;
+        margin: 20px auto 0;
+        padding: 0;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .product-info h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin: 1rem 0;
+        width: 100%;
+        color: #FF69B4;
+        font-family: 'Yatra One', serif;
+    }
+
+    .product-info p {
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 0.5rem 0;
+        color: #FF69B4;
+    }
+
+    .thumbnail-container {
+        width: 90%;
+        margin: 15px auto 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    .product-name {
+        width: 90%;
+        margin: 15px auto 0;
+        text-align: left;
+        font-size: 0.9rem;
+        color: #666;
+        font-family: Arial, sans-serif;
+        padding-left: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .product-info-mobile {
+        width: 90%;
+        margin: 20px auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        order: 2;
+    }
+
+    .product-info-mobile h1 {
+        font-size: 1.2rem;
+        text-align: left;
+        margin: 0.5rem 0;
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+
+    .product-info-mobile p {
+        font-size: 1.8rem;
+        text-align: left;
+        margin: 0.5rem 0;
+        color: #FF69B4;
+        font-weight: bold;
+    }
+
+    .product-description {
+        width: 90%;
+        margin: 20px auto;
+        order: 3;
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .desc {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .product-details-container {
+        padding: 0;
+        margin-top: 8rem;
+    }
+
+    .product-tag {
+        background-color: #4A4A4A;
+        color: white;
+        padding: 4px 12px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .product-info {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        order: 1;
+    }
+
+    .product-info h1 {
+        font-size: 1.5rem;
+        color: #333;
+        margin: 0.5rem 0;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .product-info p {
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: bold;
+        margin: 0.5rem 0;
+        text-align: left;
+    }
+
+    .product-description {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        order: 2;
+        font-size: 1rem;
+    }
+
+    .quantity-container {
+        order: 3;
+    }
+}
+@media (max-width: 768px) {
+    .product-rating {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+
+    .stars {
+        color: #999;
+        font-size: 1rem;
+    }
+
+    .reviews {
+        color: #666;
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 1.8rem;
+        color: #333;
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+
+    .quantity-container {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .quantity-input {
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .btn-buy-now {
+        flex: 1;
+        background-color: #26A69A;
+        color: white;
+        border: none;
+        padding: 0.8rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .more-info {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: block;
+        margin-top: 1rem;
+    }
+}

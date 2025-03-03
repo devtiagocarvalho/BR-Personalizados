@@ -1,0 +1,112 @@
+/* Título centralizado */
+@font-face {
+    font-family: 'glbOpenSans';
+    src: url('../../assets/fonts/glbOpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titulo {
+    font-family: 'glbOpenSans', "Open Sans", Arial, Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Helvetica, Noto, Ubuntu, "Segoe UI", sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 0.5 !important;
+    margin-bottom: 0.1rem !important;
+}
+
+.subtitulo {
+    font-family: 'glbOpenSans', "Open Sans", Arial, Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Helvetica, Noto, Ubuntu, "Segoe UI", sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 2.0rem;
+    text-align: left;
+    margin-left: 2rem;  
+    margin-bottom: 3rem;
+}
+
+/* Estilo para o contêiner de imagens */
+.imagem-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Cartão contendo imagem e texto */
+.card {
+    width: calc(33.333% - 20px);
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Imagens com tamanho reduzido */
+.card img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Nome do produto */
+.nome {
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 1.5rem !important;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'VisbyCF-Bold';
+    src: url('../../screens/Visby-CF/Visby 2.3w/Webfont/VisbyCF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.titulo {
+    font-family: 'VisbyCF-Bold', Arial, sans-serif !important;
+    font-weight: 900;
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.1rem !important;
+}
+
+.subtitulo {
+    font-family: 'VisbyCF-Bold', Arial, sans-serif !important;
+    font-weight: 900;
+    color: black;
+    font-size: 2.0rem;
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Preço do produto */
+.preco {
+    font-family: 'VisbyCF-Bold', Arial, sans-serif !important;
+    font-size: 1.8rem !important;
+    color: #FF1493;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Tamanho do produto */
+.tamanho {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.3rem!important;
+    color: #666;
+    font-style: italic;
+    margin: 2px 0;
+    text-align: center;
+}
+  

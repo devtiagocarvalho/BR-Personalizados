@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+}
